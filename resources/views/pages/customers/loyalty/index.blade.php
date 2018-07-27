@@ -19,24 +19,22 @@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Customers Name</th>
-                                <th>List of Vehicles</th>
+                                <th>Loyalty Program List</th>
+                                <th>Happening In</th>
                                 <th :colspan="2">Execute</th>
                             </tr>
                             </thead>
                             <tbody>
                             <td>
-                                Respati Tri Susetyo
+                               <h3><b>Promo Beli 1 Dapat 1 Hoka Hoka Bento</b></h3>
                             </td>
                             <td>
-                                <a class="btn btn-app">
-                                    <span class="badge bg-teal">67</span>
-                                    <i class="fa fa-inbox"></i> Orders
-                                </a>
+                                <h5>10 may 2018 - 15 may 2018</h5><br>
+                                Mall Arion, Mall Ambasador, Mall Taman Anggrek
                             </td>
                             <td>
-                                <a class="btn btn-danger">
-                                    <i class="fa fa-pencil"></i> Delete
+                                <a class="btn btn-danger" data-toggle="modal" data-target="#modal-default">
+                                    <i class="fa fa-pencil"></i> Edit
                                 </a>
                                 <a class="btn btn-warning">
                                     <i class="fa fa-times"></i> Delete
@@ -63,82 +61,56 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
+                        
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="inputName" class="col-sm-2 control-label">Name</label>
-
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="inputName" placeholder="Name" type="text">
+                                <label for="inputNamePromo" class="col-md-2 control-label">Name Promo</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="promo" id="inputNamePromo">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="inputEmail" placeholder="email" type="email">
+                                <label for="inputDescription" class="col-md-2 control-label">Description</label>
+                                <div class="col-md-10">
+                                    <textarea name="description" class="form-control" id="inputDescription" rows="8"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+                                <label for="inputImage" class="col-md-2 control-label">Image</label>
+                                <div class="col-md-10">
+                                    <input type="file" name="file" id="inputImage" />
+                                </div>
+                            </div>
 
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="inputPhone"  placeholder="phone" type="text">
+                            <div class="form-group">
+                                <label for="inputTempat" class="col-md-2 control-label">Place</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="place" id="inputTempat" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputVehicles" class="col-sm-2 control-label">Vehicles Type</label>
-
-                                <div class="col-sm-10">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="inputPlat" class="col-sm-2 control-label">Types</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control select2 select2-hidden-accessible no-margin" style="width: 100%;" tabindex="-1" aria-hidden="true" id="inputVehicles">
-                                                    <option value="bmw">Mobil</option>
-                                                    <option value="bmw">Motor</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputPlat" class="col-sm-2 control-label">Brands</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control select2 select2-hidden-accessible  no-margin" style="width: 100%;" tabindex="-1" aria-hidden="true" id="inputVehicles">
-                                                    <option value="bmw">BMW</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4" style="margin-left: 0;">
-                                            <label for="inputPlat" class="col-sm-2 control-label">Plat</label>
-                                            <div class="col-md-10">
-                                                <input type="text" class="form-control" name="plat">
-                                            </div>
-                                        </div>
+                                <label for="inputDate" class="col-md-2 control-label">Date</label>
+                                <div class="col-md-10">
+                                    <div class="col-sm-6">
+                                        <label for="inputfrom" class="control-label col-md-2">From</label>
+                                        <input type="date" name="from" id="inputfrom" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputTo" class="control-label col-md-2">To</label>
+                                        <input type="date" name="to" id="inputTo" class="form-control">
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-2">
+                                    <button type="button" name="save" class="btn btn-primary">Save</button>
+                                    <button type="button" name="cancel" class="btn btn-danger">Cancel</button>
+                                </div>
+                            </div>
 
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button class="btn btn-default btn-lg">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <hr class="divider">
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button class="btn btn-success">
-                                        Save
-                                        <i class="fa fa-check"></i>
-                                    </button>
-                                    <button class="btn btn-danger">
-                                        Cancel
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
+
+
                         </div>
-                        <!-- /.box-body -->
 
                     </form>
                 </div>

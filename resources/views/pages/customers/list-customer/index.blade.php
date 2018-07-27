@@ -29,14 +29,14 @@
                                     Respati Tri Susetyo
                                 </td>
                                 <td>
-                                    <a class="btn btn-app">
+                                    <button class="btn btn-app" data-toggle="modal" data-target="#modal-list-vehicles">
                                         <span class="badge bg-teal">67</span>
                                         <i class="fa fa-inbox"></i> Orders
-                                    </a>
+                                    </button>
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger">
-                                        <i class="fa fa-pencil"></i> Delete
+                                    <a class="btn btn-danger" data-toggle="modal" data-target="#modal-default">
+                                        <i class="fa fa-pencil"></i> Edit
                                     </a>
                                     <a class="btn btn-warning">
                                         <i class="fa fa-times"></i> Delete
@@ -53,6 +53,8 @@
         <!-- /.row -->
     </section>
 
+
+    //MODAL
     <div class="modal fade" id="modal-default">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -148,4 +150,42 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+
+    <!-- modal list vehicles -->
+    <div class="modal fade" id="modal-list-vehicles">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">List Vehicles</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6" style="display: inline-flex">
+                                <i class="fa fa-car icon-size"></i>
+                                <div class="rebox-detail">
+                                    <h3 class="rebox-h3"><b>B 123 RIC</b></h3>
+                                    <p class="rebox-p">BMW series</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6" style="display: inline-flex">
+                                <i class="fa fa-car icon-size"></i>
+                                <div class="rebox-detail">
+                                    <h3 class="rebox-h3"><b>B 123 RIC</b></h3>
+                                    <p class="rebox-p">BMW series</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
 @endsection

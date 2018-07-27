@@ -13,7 +13,7 @@ class LoyaltyController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.customers.loyalty.index');
     }
 
     /**

@@ -17,6 +17,8 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
 
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -185,17 +187,17 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Menu</li>
                 <li class="active">
-                    <a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                    <a href="{{ route("dashboard.index") }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-user"></i> <span>Customers</span>
+                    <a href="javascript;;"><i class="fa fa-user"></i> <span>Customers</span>
                         <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">List of Customers</a></li>
-                        <li><a href="#">Loyalty Programs</a></li>
+                        <li><a href="{{ route("list.index") }}">List of Customers</a></li>
+                        <li><a href="{{ route("loyalty.index") }}">Loyalty Programs</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -205,10 +207,10 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Classes</a></li>
-                        <li><a href="#">Buildings</a></li>
+                        <li><a href="{{ route('location.index') }}">Locations</a></li>
+                        <li><a href="{{ route('category.index') }}">Categories</a></li>
+                        <li><a href="{{ route('class.index') }}">Classes</a></li>
+                        <li><a href="{{ route('building.index') }}">Buildings</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -218,8 +220,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Vehicles Type</a></li>
-                        <li><a href="#">Vehicles Brand</a></li>
+                        <li><a href="{{ route('vehicles_type.index') }}">Vehicles Type</a></li>
+                        <li><a href="{{ route('vehicles_brand.index') }}">Vehicles Brand</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -229,9 +231,9 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Curriencies</a></li>
-                        <li><a href="#">Tax</a></li>
-                        <li><a href="#">Tariff</a></li>
+                        <li><a href="{{ route('currency.index') }}">Curriencies</a></li>
+                        <li><a href="{{ route('tax.index') }}">Tax</a></li>
+                        <li><a href="{{ route('tariff.index') }}">Tariff</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -241,12 +243,12 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Time Shift</a></li>
-                        <li><a href="#">Employess</a></li>
+                        <li><a href="{{ route('time_shift.index') }}">Time Shift</a></li>
+                        <li><a href="{{ route('employess.index') }}">Employess</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-gear"></i> <span>Settings</span></a>
+                    <a href="{{ route('settings.index') }}"><i class="fa fa-gear"></i> <span>Settings</span></a>
                 </li>
             </ul>
         </section>
