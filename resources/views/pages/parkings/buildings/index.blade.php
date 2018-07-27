@@ -20,23 +20,27 @@
                             <thead>
                             <tr>
                                 <th>Customers Name</th>
-                                <th>List of Vehicles</th>
+                                <th>Slot Classes</th>
                                 <th :colspan="2">Execute</th>
                             </tr>
                             </thead>
                             <tbody>
                             <td>
-                                Respati Tri Susetyo
+                                <h3><b>Gedung Setiabudi 2</b></h3><br>
+                                <p><b>Perkantoran</b></p>
+                                <p>Jl. H. R. Rasuna Said No.62, Karet Kuningan, Setiabudi, Jakarta Selatan 12920</p>
+
                             </td>
                             <td>
-                                <a class="btn btn-app">
-                                    <span class="badge bg-teal">67</span>
-                                    <i class="fa fa-inbox"></i> Orders
-                                </a>
+                                <ul>
+                                    <ol>Regular : 134 <b>slots</b></ol>
+                                    <ol>VIP     : 15 <b>slots</b></ol>
+                                    <ol>VVIP    : 15 <b>slots</b></ol>
+                                </ul>
                             </td>
                             <td>
-                                <a class="btn btn-danger">
-                                    <i class="fa fa-pencil"></i> Delete
+                                <a class="btn btn-danger" data-toggle="modal" data-target="#modal-default">
+                                    <i class="fa fa-pencil"></i> Edit
                                 </a>
                                 <a class="btn btn-warning">
                                     <i class="fa fa-times"></i> Delete
@@ -63,83 +67,27 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
-                        <div class="box-body">
-                            <div class="form-group">
-                                <label for="inputName" class="col-sm-2 control-label">Name</label>
-
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="inputName" placeholder="Name" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="inputEmail" placeholder="email" type="email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
-
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="inputPhone"  placeholder="phone" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputVehicles" class="col-sm-2 control-label">Vehicles Type</label>
-
-                                <div class="col-sm-10">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="inputPlat" class="col-sm-2 control-label">Types</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control select2 select2-hidden-accessible no-margin" style="width: 100%;" tabindex="-1" aria-hidden="true" id="inputVehicles">
-                                                    <option value="bmw">Mobil</option>
-                                                    <option value="bmw">Motor</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputPlat" class="col-sm-2 control-label">Brands</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control select2 select2-hidden-accessible  no-margin" style="width: 100%;" tabindex="-1" aria-hidden="true" id="inputVehicles">
-                                                    <option value="bmw">BMW</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4" style="margin-left: 0;">
-                                            <label for="inputPlat" class="col-sm-2 control-label">Plat</label>
-                                            <div class="col-md-10">
-                                                <input type="text" class="form-control" name="plat">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button class="btn btn-default btn-lg">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <hr class="divider">
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button class="btn btn-success">
-                                        Save
-                                        <i class="fa fa-check"></i>
-                                    </button>
-                                    <button class="btn btn-danger">
-                                        Cancel
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.box-body -->
-
+                      <div class="body-box">
+                          <div class="form-group">
+                              <label for="inputNameBuilding" class="control-label col-md-2">Buildings Name</label>
+                              <div class="col-md-10">
+                                  <input type="text" class="form-control" name="building_name" id="inputNameBuilding">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="inputClassBuilding" class="control-label col-md-2">Classes</label>
+                              <select name="building_classe" id="inputClassBuilding">
+                                  <option value="perkantoran">Perkantoran</option>
+                                  <option value="perkantoran">Pusat Perbelajaan</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <div class="col-md-10 col-md-offset-2">
+                                  <button type="button" name="save" class="btn btn-primary">Save</button>
+                                  <button type="button" name="cancel" class="btn btn-danger">Cancel</button>
+                              </div>
+                          </div>
+                      </div>
                     </form>
                 </div>
             </div>

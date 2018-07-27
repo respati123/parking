@@ -39,6 +39,8 @@ return [
          */
         'modules' => 'modules',
 
+        'users' => 'users',
+
 
         'roles' => 'roles',
 
@@ -64,7 +66,7 @@ return [
          * basic default value but you may easily change it to any table you like.
          */
 
-        'user_has_roles' => 'user_has_roles',
+        'users_has_roles' => 'users_has_roles',
 
         /*
          * When using the "HasRoles" trait from this package, we need to know which
@@ -73,6 +75,11 @@ return [
          */
 
         'modules_has_permission' => 'modules_has_permission',
+
+        'role_has_permissions' => 'role_has_permission',
+
+        'roles_has_modules' => 'roles_has_modules',
+
 
     ],
 
